@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post Manager</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Posts</h1>
+
+    <!-- Button to navigate to Create Post page -->
+    <a href="/create" class="create-post-btn">Create New Post</a>
+
+    <!-- Post List -->
+    <div class="posts">
+      <% if (posts.length > 0) { %>
+        <% posts.forEach(post => { %>
+          <div class="post">
+            <h2><%= post.title %></h2>
+            <p><%= post.content %></p>
+            <form action="/edit/<%= post.id %>" method="GET" class="inline-form">
+              <button type="submit">Edit</button>
+            </form>
+            <form action="/delete/<%= post.id %>" method="POST" class="inline-form">
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+        <% }) %>
+      <% } else { %>
+        <p>No posts available. Create a new one <a href="/create">here</a>.</p>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>

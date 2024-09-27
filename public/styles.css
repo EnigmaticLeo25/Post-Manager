@@ -1,0 +1,124 @@
+/* Common styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #1e90ff 100%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.create-post-btn {
+  display: inline-block;
+  background-color: #1e90ff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  transition: background-color 0.3s;
+}
+
+.create-post-btn:hover {
+  background-color: #007acc;
+}
+
+.post-form input, .post-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+
+.post-form input:focus, .post-form textarea:focus {
+  background: rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+.posts {
+  margin-top: 30px;
+}
+
+.post {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align: left;
+  transition: box-shadow 0.3s;
+}
+
+.post:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.post h2 {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.post p {
+  color: #f0f0f0;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.inline-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.inline-form button {
+  background-color: #ff9a9e;
+}
+
+.inline-form button:hover {
+  background-color: #f06a6a;
+}
